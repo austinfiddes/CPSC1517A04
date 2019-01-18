@@ -14,7 +14,7 @@ namespace OOPSReview
         //  instances created by the programmer/developer 
         //this instance of random will be generated once on the first 
         //  Die instance that is created 
-        private static Random _rnd = new Random()
+        private static Random _rnd = new Random();
         //Data Members
         //  usually private 
         private int _Sides;
