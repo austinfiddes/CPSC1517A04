@@ -12,12 +12,12 @@ namespace OOPSReview
         public int Player2 { get; set; }
         //optionally, for practice only add constructors 
 
-        public Turn()
+        public Turn() //Default Constructor 
         {
             
         }
 
-        public Turn(int player1, int player2)
+        public Turn(int player1, int player2) //Greedy Constructor 
         {
             Player1 = player1;
             Player2 = player2;

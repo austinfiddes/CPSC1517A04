@@ -150,7 +150,7 @@ namespace OOPSReview
             } while (menuChoice.ToUpper() != "X");
         }//eomain
 
-        public static void DisplayCurrentPlayerStats(List<Turn> rounds)
+        public static void DisplayCurrentPlayerStats(List<Turn> rounds) //static class
         {
 
             int wins1 = 0;
