@@ -3,6 +3,7 @@
     Page.Title = "RadioButtons";
     var language = Request.Form["languagegroup"];
     var script = Request.Form["scriptgroup"];
+    var thebutton = Request.Form["formbutton"];
     //These ifs are required because .Equals() is used on the check parameter in our form.
     //On the first pass of the page, language and script will be null.
     //.Equals() does not like nulls
@@ -27,27 +28,38 @@
 
 @if (IsPost)
 {
-    if (string.IsNullOrEmpty(language) || string.IsNullOrEmpty(script))
+    //which button was pressed
+    if (thebutton.Equals("Clear"))
     {
-        <p><span style="color:firebrick">Make a choice from both groups.</span></p>
+        language = "";
+        script = "";
     }
     else
     {
-        if (language.Equals("C#"))
+
+
+        if (string.IsNullOrEmpty(language) || string.IsNullOrEmpty(script))
         {
-            <p>You will greatly enjoy CPSC1517 because we are coding with C#.</p>
+            <p><span style="color:firebrick">Make a choice from both groups.</span></p>
         }
         else
         {
-            <p>Too bad. CPSC1517 codes with C#</p>
-        }
-        if (script.Equals("Razor"))
-        {
-            <p>Enjoy using Razor</p>
-        }
-        else
-        {
-            <p>Enjoy not using Razor</p>
+            if (language.Equals("C#"))
+            {
+                <p>You will greatly enjoy CPSC1517 because we are coding with C#.</p>
+            }
+            else
+            {
+                <p>Too bad. CPSC1517 codes with C#</p>
+            }
+            if (script.Equals("Razor"))
+            {
+                <p>Enjoy using Razor</p>
+            }
+            else
+            {
+                <p>Enjoy not using Razor</p>
+            }
         }
     }
 }
@@ -77,6 +89,8 @@
         <input type="radio" id="scriptgroup" name="scriptgroup" value="PHP"
                checked="@(script.Equals("PHP")?true:false)" />&nbsp;&nbsp;PHP<br /><br />
         <button type="submit" id="formbutton" name="formbutton" value="submit" class="btn btn-primary">Submit</button>
+        &nbsp;&nbsp;
+        <button type="submit" id="formbutton" name="formbutton" value="Clear" class="btn">Clear</button>
     </div>
 </form>
 
