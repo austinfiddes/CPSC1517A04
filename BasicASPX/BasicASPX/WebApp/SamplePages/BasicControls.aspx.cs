@@ -17,6 +17,7 @@ namespace WebApp.SamplePages
             //this event method is executed EACH and EVERY time this page is processed.
             //this event method is executed BEFORE ANY EVENT method is processed
 
+            //clear out all old messages
 
             //this page is an excellent place to do page initialization of your controls.
             //there is a property to test for post back of your page called Page.IsPostBack (Razor: IsPost)
