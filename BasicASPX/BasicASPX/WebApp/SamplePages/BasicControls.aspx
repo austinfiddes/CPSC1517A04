@@ -48,6 +48,8 @@
             <td>
                 <asp:DropDownList ID="CollectionList" runat="server">
                 </asp:DropDownList>
+                &nbsp;&nbsp;
+                <asp:Button ID="Button1" runat="server" Text="Button" />
             </td>
         </tr>
         <tr>
