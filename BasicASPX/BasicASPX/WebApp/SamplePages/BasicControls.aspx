@@ -49,7 +49,7 @@
                 <asp:DropDownList ID="CollectionList" runat="server">
                 </asp:DropDownList>
                 &nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="ListSubmit" runat="server" Text="List Submit" OnClick="ListSubmit_Click" />
             </td>
         </tr>
         <tr>

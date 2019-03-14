@@ -122,5 +122,30 @@ namespace WebApp.SamplePages
 
             }//eof
         }//eom submitchoice
+
+        protected void ListSubmit_Click(object sender, EventArgs e)
+        {
+            if (CollectionList.SelectedIndex == 0)
+            {
+                OutputMessage.Text = "Select a course to view";
+            }
+            else
+            {
+                string submitchoice = CollectionList.SelectedValue;
+                TextBoxNumericChoice.Text = submitchoice;
+                RadioButtonListChoice.SelectedValue = submitchoice;
+                if (submitchoice.Equals("2") || submitchoice.Equals("3"))
+                {
+                    CheckBoxChoice.Checked = true;
+                }
+                else
+                {
+                    CheckBoxChoice.Checked = false;
+                }
+                DisplayReadOnly.Text = CollectionList.SelectedItem.Text
+                   + " at index " + CollectionList.SelectedIndex
+                   + " has a value of " + CollectionList.SelectedValue;
+            }
+        }
     }//eoc form class
 }
